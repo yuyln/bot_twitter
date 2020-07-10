@@ -1,10 +1,11 @@
 import os
 from twitter import *
+
+
 class Bot(Api):
     def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret):
         super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret)
         self.PostUpdate("teste")
-
 
 
 access_token = os.environ['ACCESS_TOKEN']
