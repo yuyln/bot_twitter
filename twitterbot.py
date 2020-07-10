@@ -10,3 +10,5 @@ api = Api(consumer_key=twitter_key,
                       access_token_key=access_token,
                       access_token_secret=access_secret)
 
+#print(api.VerifyCredentials())
+print(api.PostDirectMessage('hinpeeipl', 'hinpeeipl', 'YuyBot', return_json=False))
