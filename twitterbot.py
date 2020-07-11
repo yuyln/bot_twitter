@@ -52,13 +52,14 @@ class Bot(Api):
 		r34 = rule34.Sync()
 		img = r34.getImages(choice(Bot.hentais))
 		try:
-			img = choice(r34.getImages(choice(Bot.hentais)))
+			cc = choice(Bot.hentais)
+			img = choice(r34.getImages(cc))
 			img1 = img.file_url
 			img = r34.download(img.file_url)
-			self.PostUpdate(status="", media=img)
+			self.PostUpdate(status=f"Rule34 Search: {cc}\nURL: {img1}", media=img)
 			os.remove(img)
 			with open('log.txt', 'a') as arq:
-				arq.write(f'Postado: {img1}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
+				arq.write(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
 		except Exception as e:
 			with open('log.txt', 'a') as arq:
 				arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
