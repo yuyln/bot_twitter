@@ -24,17 +24,11 @@ class Bot(Api):
 			self.PostUpdate(status="", media=img)
 			os.remove(img)
 			with open('log.txt', 'a') as arq:
-				arq.write(f'Postado: {img1}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------')		
+				arq.write(f'Postado: {img1}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
 		except Exception as e:
 			with open('log.txt', 'a') as arq:
-				arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------')
+				arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
 				
-			
-			
-		
-		
-        
-
 
 access_token = os.environ['ACCESS_TOKEN']
 access_secret = os.environ['ACCESS_SECRET']
@@ -45,4 +39,5 @@ api = Bot(consumer_key=twitter_key,
                       consumer_secret=twitter_secret,
                       access_token_key=access_token,
                       access_token_secret=access_secret)
+                      
 api.posta_rule()
