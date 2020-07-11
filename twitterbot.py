@@ -9,7 +9,41 @@ import datetime
 class Bot(Api):
 	hentais = ['darkness_(konosuba)',
 			   'tristana',
-			   'vayne']
+			   'vayne',
+			   'hatsune_miku',
+			   'asuka_langley_sohryu',
+			   'aqua_(konosuba)',
+			   'aqua_eyes',
+			   'evangelion:_2.0_you_can_(not)_advance',
+			   'megumin',
+			   'kono_subarashii_sekai_ni_shukufuku_wo!',
+			   'bikini',
+			   'ahegao',
+			   'asuna_(sao)',
+			   'sword_art_online',
+			   'paizuri',
+			   'ahri',
+			   'akali',
+			   'anivia',
+			   'ashe_(league_of_legends)',
+			   'caitlyn',
+			   'riot_games',
+			   'diana',
+			   'fiora',
+			   'irelia',
+			   'league_of_legends',
+			   'jinx',
+			   'raven',
+			   'katarina',
+			   'my_hero_academia',
+			   'ochako_uraraka',
+			   'kill_la_kill',
+			   'eromanga_sensei',
+			   'kirino_kosaka',
+			   'dagashi_kashi',
+			   'valorant',
+			   'sage_(valorant)',
+			   'jett_(valorant)']
 	def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
 		super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
 		print("O bot ligou")
@@ -39,5 +73,7 @@ api = Bot(consumer_key=twitter_key,
                       consumer_secret=twitter_secret,
                       access_token_key=access_token,
                       access_token_secret=access_secret)
-                      
-api.posta_rule()
+
+while True:
+	api.posta_rule()
+	sleep(60 * 10)
