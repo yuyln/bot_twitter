@@ -44,7 +44,8 @@ class Bot(Api):
 			   'valorant',
 			   'sage_(valorant)',
 			   'jett_(valorant)',
-                           'nekopara']
+                           'nekopara',
+                           'kirigaya_suguha']
 	def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
 		super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
 		print("O bot ligou")
