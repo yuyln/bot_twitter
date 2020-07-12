@@ -43,7 +43,8 @@ class Bot(Api):
 			   'dagashi_kashi',
 			   'valorant',
 			   'sage_(valorant)',
-			   'jett_(valorant)']
+			   'jett_(valorant)',
+                           'nekopara']
 	def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
 		super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
 		print("O bot ligou")
