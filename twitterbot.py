@@ -63,6 +63,7 @@ class Bot(Api):
 			with open('log.txt', 'a') as arq:
 				arq.write(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
 		except Exception as e:
+                        print(f'{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}: {e}')
 			with open('log.txt', 'a') as arq:
 				arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
 				
