@@ -84,4 +84,4 @@ api = Bot(consumer_key=twitter_key,
 
 while True:
 	api.posta_rule()
-	sleep(60 * 10)
+	sleep(3600)
