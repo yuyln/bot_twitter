@@ -52,6 +52,7 @@ class Bot(Api):
 	def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
 		super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
 		print("O bot ligou")
+		print(Bot.hentais)
 	
 	def posta_rule(self):
 		r34 = rule34.Sync()
@@ -63,10 +64,11 @@ class Bot(Api):
 			img = r34.download(img.file_url)
 			self.PostUpdate(status=f"Rule34 Search: {cc}\nURL: {img1}", media=img)
 			os.remove(img)
+			print(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
 			with open('log.txt', 'a') as arq:
 				arq.write(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
 		except Exception as e:
-                        print(f'{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}: {e}')
+                        print(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
 			with open('log.txt', 'a') as arq:
 				arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
 				
