@@ -48,7 +48,11 @@ class Bot(Api):
                    'kirigaya_suguha',
                    'nisekoi',
                    'kirisaki_chitoge',
-                   'imouto_sae_ireba_ii']
+                   'imouto_sae_ireba_ii',
+                   'bunny_girl',
+                   'seishun_buta_yarou_wa_bunny_girl_senpai_no_yume_wo_minai'
+                   'ore_no_imouto_ga_konna_ni_kawaii_wake_ga_nai ',
+                   'hinata_hyuuga']
         def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
                 super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
                 print("O bot ligou")
@@ -63,10 +67,12 @@ class Bot(Api):
                         img = r34.download(img.file_url)
                         self.PostUpdate(status=f"Rule34 Search: {cc}\nURL: {img1}", media=img)
                         os.remove(img)
+                        print(Bot.hentais)
                         print(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
                         with open('log.txt', 'a') as arq:
                                 arq.write(f'Postado: {img1}\nData: {datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')		
                 except Exception as e:
+                        print(Bot.hentais)
                         print(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
                         with open('log.txt', 'a') as arq:
                                 arq.write(f'Erro: {e}\nData:{datetime.datetime.now().strftime("%H:%M:%S - %d/%m/%Y")}\n---------------------------\n')
