@@ -52,7 +52,12 @@ class Bot(Api):
                    'bunny_girl',
                    'seishun_buta_yarou_wa_bunny_girl_senpai_no_yume_wo_minai'
                    'ore_no_imouto_ga_konna_ni_kawaii_wake_ga_nai ',
-                   'hinata_hyuuga']
+                   'hinata_hyuuga',
+                   'echidna_(re:zero)',
+                   're:zero_kara_hajimeru_isekai_seikatsu',
+                   'emilia_(re:zero)',
+                   'rem_(re:zero)',
+                   'ram_(re:zero)']
         def __init__(self, consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit=False):
                 super().__init__(consumer_key, consumer_secret, access_token_key, access_token_secret, sleep_on_rate_limit)
                 print("O bot ligou")
