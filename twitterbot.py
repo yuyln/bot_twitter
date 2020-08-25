@@ -50,7 +50,7 @@ class Bot(Api):
                    'kirisaki_chitoge',
                    'imouto_sae_ireba_ii',
                    'bunny_girl',
-                   'seishun_buta_yarou_wa_bunny_girl_senpai_no_yume_wo_minai'
+                   'seishun_buta_yarou_wa_bunny_girl_senpai_no_yume_wo_minai',
                    'ore_no_imouto_ga_konna_ni_kawaii_wake_ga_nai ',
                    'hinata_hyuuga',
                    'echidna_(re:zero)',
